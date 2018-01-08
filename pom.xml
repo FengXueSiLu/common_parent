@@ -4,12 +4,12 @@
   <artifactId>common_parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
     <modules>
-		<module>../bos_domain</module>
-		<module>../bos_management</module>
-		<module>../bos_fore</module>
-		<module>../bos_sms</module>
-		<module>../crm_domain</module>
-        <module>../crm_management</module>
+		<module>bos_domain</module>
+		<module>bos_management</module>
+		<module>bos_fore</module>
+		<module>bos_sms</module>
+		<module>crm_domain</module>
+        <module>crm_management</module>
     </modules>
     <packaging>pom</packaging>
   <name>common_parent</name>

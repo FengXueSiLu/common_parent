@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AngularJS基于MVC复杂操作</title>
+		<script src="../../../../target/bos/js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 初始化 myapp 模块 
+			var myapp = angular.module("myapp",[]);
+			// 定义模块的控制器 
+			// 依赖注入 ，$scope作用域对象，操作当前作用域视图 
+			myapp.controller("myctrl",["$scope",function($scope){
+				// 对模型进行初始化赋值 
+				$scope.aaaa="QQQQQQ";
+				// 在作用域 提供 clearVal 点击事件 
+				$scope.clearVal=function(){
+					$scope.aaaa="";// 模型设置为空 
+				}
+			}]);
+		</script>
+	</head>
+	<body>
+		<!-- ng-app="myapp" 定义了一个模块 -->
+		<div ng-app="myapp" ng-controller="myctrl">
+			<div>
+				<!-- ng-model模型作用  -->
+				<input type="text" name="name" ng-model="aaaa"/>
+				<!-- 提供按钮 --> 
+				<input type="button" value="清空" ng-click="clearVal()"/>
+			</div>
+			<div >
+				<!-- {{}} 等价于 ng-bind 用于数据显示 -->
+				hello,{{aaaa}}
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+     <groupId>cn.itcast.maven</groupId>
+ 	 <artifactId>common_parent</artifactId>
+  	 <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>crm_management</artifactId>
+  <packaging>war</packaging> 
+  <name>crm_management</name>
+  <description>客户关系管理系统</description>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>cn.itcast.maven</groupId>
+  		<artifactId>crm_domain</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<!-- cxf 进行rs开发 必须导入  -->
+  		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<!-- 日志引入  -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.12</version>
+		</dependency>
+
+		<!-- 客户端 -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-client</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<!-- 扩展json提供者 -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-rs-extension-providers</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+	
+		<!-- 转换json工具包，被extension providers 依赖 -->
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>1.3.7</version>
+		</dependency>
+  </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.codehaus.mojo</groupId>
+  			<artifactId>tomcat-maven-plugin</artifactId>
+  			<version>1.1</version>
+  			<configuration>
+  				<port>9002</port>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/../bos_fore" />
-    <file type="web" url="file://$PROJECT_DIR$/../bos_management" />
-    <file type="web" url="file://$PROJECT_DIR$/../bos_sms" />
-    <file type="web" url="file://$PROJECT_DIR$/../crm_management" />
+    <file type="web" url="file://$PROJECT_DIR$/bos_fore" />
+    <file type="web" url="file://$PROJECT_DIR$/bos_management" />
+    <file type="web" url="file://$PROJECT_DIR$/bos_sms" />
+    <file type="web" url="file://$PROJECT_DIR$/crm_management" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
